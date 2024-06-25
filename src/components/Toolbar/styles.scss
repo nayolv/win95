@@ -1,0 +1,17 @@
+@use "../../helpers/colors.scss" as c;
+
+.toolbar {
+  background-color: c.$gray-2;
+  height: 30px;
+  
+  &__start {
+    margin: 2px 0;
+    box-shadow: 7px 7px 1px -5px c.$white inset, 1px 1px 1px 1px c.$black-1;
+    border: none;
+    background-color: c.$gray-1;
+    font-weight: bold;
+    img {
+      height: 20px;
+    }
+  }
+}

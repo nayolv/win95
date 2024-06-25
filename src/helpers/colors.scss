@@ -1,0 +1,23 @@
+$principal-background: #007c7f;
+
+$white:  #FFFFFF;
+$black:  #000000;
+$black-1: #1f1f1f;
+$gray-1: #c1c1c1;
+$gray-2: #BFC7C9;
+$gray-3: #817E86;
+$gray-5: #C9CACA;
+
+$blue: #040382;
+
+:export {
+    principalBackground: $principal-background;
+    gray2: $gray-2;
+    white: $white;
+    gray1: $gray-1;
+    black: $black;
+    black1: $black-1;
+    gray3: $gray-3;
+    gray5: $gray-5;
+    blue: $blue;
+}

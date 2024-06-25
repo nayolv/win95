@@ -1,0 +1,50 @@
+@use "../../helpers/colors.scss" as c;
+
+.menu {
+  background-color: c.$gray-2;
+  min-height: 70%;
+  width: 18rem;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1.7rem;
+  margin-left: 2px;
+  z-index: 10;
+  box-shadow: 1px 1px 1px 1px c.$black-1;
+  padding: 3px;
+
+  &__lateral {
+    background-color: c.$gray-3;
+    width: 50px;
+
+    .text {
+      writing-mode: vertical-rl;
+      rotate: 180deg;
+      font-size: 45px;
+      color: c.$gray-5;
+      font-family: "Teko", sans-serif;
+    }
+  }
+
+  &__links {
+    width: 100%;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        button {
+          border: none;
+          text-align: start;
+          width: 100%;
+          font-size: 19px;
+          font-weight: 100;
+          background-color: transparent;
+          height: 50px;
+        }
+        button:hover {
+          color: c.$white;
+          background-color: c.$blue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use './helpers/colors.scss' as c;
+
+.container {
+    &__main {
+        height: 100%;
+        background-color: c.$principal-background;
+    }
+}
