@@ -1,0 +1,11 @@
+@use "../../helpers/colors.scss" as c;
+
+.about {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+  &__container {
+    height: 500px;
+    width: 70%;
+  }
+}

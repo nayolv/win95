@@ -1,4 +1,5 @@
-import { usePrincipalMenuState } from "../../../store/principalMenu"
+import { useNameComponents } from "../../../store/nameComponents";
+import { useOpenManagement } from "../../../store/openManagement"
 
 const links = [
     {
@@ -23,13 +24,19 @@ const links = [
     }
 ]
 export const Links = () => {
-    const { cleanState } = usePrincipalMenuState();
+    const { cleanState, handleOpen } = useOpenManagement();
+    const { setName } = useNameComponents();
+
     return (
         <div className='menu__links'>
             <ul>
                 {links.map(({ id, name, img }) => (
                     <li key={id} className="mb-1 d-flex align-items-center">
-                        <button onClick={cleanState} className="d-flex align-items-center ps-2">
+                        <button onClick={() => {
+                            handleOpen(name.toLowerCase())
+                            cleanState("menu")
+                            setName(name)
+                        }} className="d-flex align-items-center ps-2">
                             <img className="me-2" src={img} alt="" />
                             {name}
                         </button>

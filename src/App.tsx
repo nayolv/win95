@@ -3,22 +3,20 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Toolbar } from './components/Toolbar/Toolbar';
 import { Menu } from './components/Menu/Menu';
-import { usePrincipalMenuState } from './store/principalMenu';
+import { useOpenManagement } from './store/openManagement';
+import { About } from './pages/About/About';
 
 function App() {
-  const { isOpen, cleanState } = usePrincipalMenuState();
-
+  const { isOpen, cleanState } = useOpenManagement();
+  console.log(isOpen)
   return (
     <>
       <main>
-
-        <div className='container__main' onClick={cleanState}>
-          Main
+        <div className='container__main' onClick={() => cleanState("menu")}>
+          {isOpen["about"] && <About />}
+          
         </div>
-        {isOpen ?
-          <Menu />
-          :
-          null}
+        {isOpen["menu"] && <Menu />}
       </main>
       <footer>
         <Toolbar />
