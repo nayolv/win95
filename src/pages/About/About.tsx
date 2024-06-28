@@ -5,7 +5,7 @@ export const About = () => {
   return (
     <div className='about'>
       <div className='about__container pe-3 pt-3'>
-        <Window>
+        <Window keyName='about'>
           About
         </Window>
       </div>

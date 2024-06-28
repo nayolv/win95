@@ -7,7 +7,7 @@ export const Toolbar = () => {
 
   return (
     <div className='toolbar d-flex align-items-center'>
-      <button className='toolbar__start px-1 d-flex align-items-center justify-content-center' onClick={() => handleOpen("menu", true)}>
+      <button className='toolbar__start px-1 d-flex align-items-center justify-content-center' onClick={() => handleOpen("menu")}>
         <img className='me-1' src={Logo} alt="" />
         Start
       </button>

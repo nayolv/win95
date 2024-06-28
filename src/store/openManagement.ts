@@ -4,7 +4,7 @@ import { persist } from 'zustand/middleware'
 type openManagement = {
     isOpen: { [key: string]: boolean }
     handleOpen: (key: string) => void
-    cleanState: (key: string) => void
+    handleClose: (key: string) => void
 }
 
 export const useOpenManagement =
@@ -13,11 +13,13 @@ export const useOpenManagement =
             isOpen: {
                 menu: false,
                 about: false,
+                experience: false,
+                contact: false,
             },
             handleOpen: (key) => {
                 set((prev) => ({ ...prev, isOpen: { ...prev.isOpen, [key]: !prev.isOpen[key] } }))
             },
-            cleanState: (key) => {
+            handleClose: (key) => {
                 set((prev) => ({ ...prev, isOpen: { ...prev.isOpen, [key]: false } }));
             }
         }),

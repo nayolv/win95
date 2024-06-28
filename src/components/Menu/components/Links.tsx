@@ -24,7 +24,7 @@ const links = [
     }
 ]
 export const Links = () => {
-    const { cleanState, handleOpen } = useOpenManagement();
+    const { handleClose, handleOpen } = useOpenManagement();
     const { setName } = useNameComponents();
 
     return (
@@ -34,8 +34,8 @@ export const Links = () => {
                     <li key={id} className="mb-1 d-flex align-items-center">
                         <button onClick={() => {
                             handleOpen(name.toLowerCase())
-                            cleanState("menu")
-                            setName(name)
+                            handleClose("menu")
+                            setName(name.toLowerCase(), name)
                         }} className="d-flex align-items-center ps-2">
                             <img className="me-2" src={img} alt="" />
                             {name}

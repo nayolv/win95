@@ -1,0 +1,18 @@
+@use "../../helpers/colors.scss" as c;
+
+.contact {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+
+  &__container {
+    height: 500px;
+    width: 30%;
+    margin-top: 6rem;
+    margin-left: 15rem;
+  }
+}

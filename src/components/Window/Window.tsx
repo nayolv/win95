@@ -4,11 +4,12 @@ import { WindowToolbar } from "./components/WindowToolbar";
 
 interface WindowDto {
     children: ReactNode
+    keyName: string
 }
-export const Window: React.FC<WindowDto> = ({ children }) => {
+export const Window: React.FC<WindowDto> = ({ children, keyName }) => {
     return (
         <div className="window">
-           <WindowToolbar />
+           <WindowToolbar keyName={keyName} />
             {children}
         </div>
     )
